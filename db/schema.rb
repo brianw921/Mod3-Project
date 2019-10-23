@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2019_10_20_173527) do
     t.string "run_time"
     t.string "plot"
     t.string "production"
-    t.string "type"
+    t.string "a_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

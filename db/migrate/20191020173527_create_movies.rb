@@ -11,7 +11,7 @@ class CreateMovies < ActiveRecord::Migration[6.0]
       t.string :run_time
       t.string :plot 
       t.string :production
-      t.string :type
+      t.string :a_type
 
       t.timestamps
     end

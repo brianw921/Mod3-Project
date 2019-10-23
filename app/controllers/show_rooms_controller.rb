@@ -1,0 +1,2 @@
+class ShowRoomsController < ApplicationController
+end

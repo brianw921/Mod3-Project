@@ -4,6 +4,8 @@ class MoviesController < ApplicationController
     render json: movies
   end 
 
+  
+
   def create 
     
     movie =  Movie.create(movie_params)
@@ -11,6 +13,11 @@ class MoviesController < ApplicationController
 
   end 
 
+  def destroy
+    movie = Movie.find(params[:id])
+    movie.destroy 
+    render json: {message: "destroyed"}
+  end
   private 
 
   def movie_params

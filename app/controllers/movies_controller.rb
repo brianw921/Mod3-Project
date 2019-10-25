@@ -1,7 +1,12 @@
 class MoviesController < ApplicationController
   def index
     movies = Movie.all
-    render json: movies
+    options = {
+      include: [:show_times, :show_rooms]
+    }
+    # byebug
+    render json: MovieSerializer.new(movies, options)
+    # render json: movies
   end 
 
   

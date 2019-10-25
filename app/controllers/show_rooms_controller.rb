@@ -2,7 +2,18 @@ class ShowRoomsController < ApplicationController
 
     def index
         show_rooms = ShowRoom.all 
-        render json: show_rooms
+        options = {
+      include: [ :show_times, :movies]
+    }
+    render json:  ShowRoomSerializer.new( show_rooms, options)
+    end
+
+    def show 
+        show_room = ShowRoom.find(params[:id])
+        options = {
+        include: [:movies, :show_times]
+    }
+    render json:  ShowRoomSerializer.new( show_room, options)
     end
 
     def create 

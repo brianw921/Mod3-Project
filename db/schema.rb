@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_10_22_175653) do
   end
 
   create_table "show_times", force: :cascade do |t|
+    t.string "day"
     t.string "show_time"
     t.bigint "show_room_id", null: false
     t.bigint "movie_id", null: false

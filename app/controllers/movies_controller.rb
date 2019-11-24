@@ -4,9 +4,9 @@ class MoviesController < ApplicationController
     options = {
       include: [:show_times, :show_rooms]
     }
-    # byebug
+
     render json: MovieSerializer.new(movies, options)
-    # render json: movies
+   
   end 
 
   
